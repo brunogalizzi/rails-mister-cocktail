@@ -1,0 +1,11 @@
+<h1><%= @cocktail.name %></h1>
+<div>
+  <ul><% @cocktail.ingredients.each do |ingredient| %>
+    <li><%= ingredient.name %>
+      <a data-confirm="Are you sure?" data-method="delete" href="/cocktails/<%= @cocktail.id %>/ingredients/<%= ingredient.id %>" style="text-decoration: none;">🗑</a></li>
+      <% end %>
+  </ul>
+  <a href="/cocktails/<%= @cocktail.id %>/ingredients/new">Add Ingredient</a>
+  <br>
+  <a href="/cocktails/">Back</a>
+</div>

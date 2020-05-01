@@ -13,15 +13,13 @@ cocktail1 = Cocktail.create(name: 'cuba-libre')
 cocktail2 = Cocktail.create(name: 'sex on the beach')
 cocktail3 = Cocktail.create(name: 'pina colada')
 
-dose1 = Dose.create(description: 'A very good dose')
-dose2 = Dose.create(description: 'A mother fuckin dose')
-dose3 = Dose.create(description: 'A huge dose')
-dose4 = Dose.create(description: 'Such a great dose')
-dose5 = Dose.create(description: 'The best dose')
-dose6 = Dose.create(description: 'Enjoy the dose')
+Dose.create(ingredient: ingredient1, cocktail: cocktail1)
+dose2 = Dose.new
+dose3 = Dose.new
+dose4 = Dose.new
+dose5 = Dose.new
+dose6 = Dose.new
 
-dose1.ingredient = ingredient1
-dose1.cocktail = cocktail1
 dose2.ingredient = ingredient1
 dose2.cocktail = cocktail2
 dose3.ingredient = ingredient2
@@ -32,3 +30,9 @@ dose5.ingredient = ingredient3
 dose5.cocktail = cocktail1
 dose6.ingredient = ingredient3
 dose6.cocktail = cocktail2
+
+dose2.save
+dose3.save
+dose4.save
+dose5.save
+dose6.save

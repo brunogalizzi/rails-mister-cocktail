@@ -1,0 +1,7 @@
+<a href="/cocktails/new">New Cocktail</a>
+<br>
+<% @cocktails.each do |cocktail| %>
+ <h1><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h1>
+ <a href="/cocktails/<%= cocktail.id %>/edit" style="text-decoration: none;">✏️</a>
+ <a data-confirm="Are you sure?" data-method="delete" href="/cocktails/<%= cocktail.id %>" style="text-decoration: none;" >🗑</a>
+<% end %>
