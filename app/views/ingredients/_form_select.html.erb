@@ -1,0 +1,9 @@
+<%= simple_form_for @ingredient, url: cocktail_ingredients_path do |f| %>
+  <select class="js-example-basic-single" name="state" id="ingredient_form">
+  <% @ing_selected.each do |ingredient| %>
+  <option ><%= ingredient.name %></option>
+  <% end %>
+  </select>
+  <p></p>
+  <%= f.submit "Save Ingredient", class: "btn btn-primary" %>
+<% end %>

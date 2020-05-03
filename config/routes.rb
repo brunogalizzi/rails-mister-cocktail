@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get '/ingredients', to: 'ingredients#index', as: 'ingredients'
   get '/ingredients/new', to: 'ingredients#cad', as: 'new_ingredient'
-  post '/ingredients/:id', to: 'ingredients#post'
+  post '/ingredients', to: 'ingredients#post'
   resources :cocktails do
     resources :ingredients, only: %i[new create destroy]
   end
