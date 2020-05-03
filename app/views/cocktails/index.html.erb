@@ -1,4 +1,5 @@
 <a href="/cocktails/new">New Cocktail</a>
+<a href="/ingredients/new">New Ingredient</a>
 <br>
 <% @cocktails.each do |cocktail| %>
  <h1><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h1>
